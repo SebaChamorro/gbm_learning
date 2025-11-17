@@ -32,12 +32,36 @@ $$ GINI(t) = 1 - \sum_{j} \left[ p(j \mid t) \right]^2 $$
 
 Aquí cero es lo más puro. El valor $p(j \mid t)$ es la frecuencia relativa de la clase j al nodo t. Un valor muy alto implica que hay espacio para seguir particionando.
 
-$$ Entropy(t) = - \sum_{j} p(j \mid t)\,\log\, p(j \mid t) $$
+$$ Entropia(t) = - \sum_{j} p(j \mid t)\,\log\, p(j \mid t) $$
 
 Este es similar al anterior con la diferencia que agrega la función Log. Es una alternativa al Gini, pero en términos generales deberían llevar al mismo resultado.
 
 ### Ejemplo
 
 ![Screenshot_20251116_181201_Chrome](https://github.com/user-attachments/assets/8c306ad6-00a8-42d7-b1c2-0bf1de5f9175)
+
+Una vez que se splitean los nodos, podemos usar un promedio ponderado para enteder la impureza de la partición, como se muestra en el siguiente ejemplo.
+
+![Screenshot_20251116_181201_Chrome](https://github.com/user-attachments/assets/2d14aa83-8c37-4bec-9447-a2e28a671bb2)
+
+### Decisión Tree Regressor vs Decisión Tree Classifier
+
+En python, existen las funciones de DecisionTreeRegressor y DecisionTreeClassifier.
+
+* DecisionTreeClassifier: Se puede utilizar para problemas del tipo 0,1 o bien para problemas multiclase. El término de error suele ser Gini o bien Entropía (a ser minimizados) La función **predict()** se utilizará para predecir un núimero entero o **predict_proba()** para predecir probabilidad.
+
+* DecisionTreeRegressor: Se puede también utilizar para problema 0,1. El término de error suele ser el mse (a minimizar). El predict() method se utilizará para predecir una variable continua.
+
+Cada uno dependerá de la variable target a predecir.
+
+### Medida de performance del modelo
+
+![Screenshot_20251116_183155_Chrome](https://github.com/user-attachments/assets/623251c8-39aa-4f97-ad15-5ad280aecc4b)
+
+De acuerdo a los modelos de clasificación o regresión nos daran las medidas. No aplica solo para árboles de decisión. 
+
+![Screenshot_20251116_183604_Chrome](https://github.com/user-attachments/assets/35a96505-d4ca-4a03-b662-ea4f59f2e67e)
+
+
 
 
