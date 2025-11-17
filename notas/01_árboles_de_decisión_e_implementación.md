@@ -24,3 +24,20 @@ Una impureza muy grande implica que no es un buen lugar para hacer una separaci�
 
 ![Screenshot_20251116_175625_Chrome](https://github.com/user-attachments/assets/0b9ac51c-8626-4e6f-a5a2-31173073d36a)
 
+Tenemos que seleccionar la variable y punto de separación. La medida más importante es "impureza" a través de la medida de Gini. Muestra como cada variable se separa a través de Gini. En el ejemplo, el primer punto da .48. Todas las observaciones tiene que separarse en este segmento. En el punto de Gini 0 significa "muy puro", por lo que nos detenemos y es suficientemente puro y no hace falta continuar el árbol. El punto 0.44 del segundo nivel no es un nivel de impureza es demasiado alto.
+
+## Medidas de impureza
+
+$$ GINI(t) = 1 - \sum_{j} \left[ p(j \mid t) \right]^2 $$
+
+Aquí cero es lo más puro. El valor $p(j \mid t)$ es la frecuencia relativa de la clase j al nodo t. Un valor muy alto implica que hay espacio para seguir particionando.
+
+$$ Entropy(t) = - \sum_{j} p(j \mid t)\,\log\, p(j \mid t) $$
+
+Este es similar al anterior con la diferencia que agrega la función Log. Es una alternativa al Gini, pero en términos generales deberían llevar al mismo resultado.
+
+### Ejemplo
+
+![Screenshot_20251116_181201_Chrome](https://github.com/user-attachments/assets/8c306ad6-00a8-42d7-b1c2-0bf1de5f9175)
+
+
