@@ -63,5 +63,10 @@ De acuerdo a los modelos de clasificación o regresión nos daran las medidas. N
 ![Screenshot_20251116_183604_Chrome](https://github.com/user-attachments/assets/35a96505-d4ca-4a03-b662-ea4f59f2e67e)
 
 
+### Formulas en python
+
+Dentro de la librería sklearn podemos encontrar
+
+from sklear.tree import DecisionTreeClassifier, DecisionTreeRegressor
 
 
